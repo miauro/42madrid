@@ -6,17 +6,17 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 13:47:16 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/21 10:02:44 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:17:57 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if(c > 47 && c < 58)
-    {
-        return (c);
-    }
-    return (0); 
+	if (c > 47 && c < 58)
+	{
+		return (c);
+	}
+	return (0);
 }
 
 // #include <stdio.h>
