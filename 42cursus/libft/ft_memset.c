@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 12:35:11 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/21 13:13:08 by mregueir         ###   ########.fr       */
+/*   Created: 2025/01/21 13:13:56 by mregueir          #+#    #+#             */
+/*   Updated: 2025/01/21 13:41:44 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	int		i;
-	char	*temp;
+#include <stdio.h>
+#include <string.h>
 
-	temp = 0;
+void	*ft_memset(void *ptr, int c, size_t num)
+{
+	size_t				i;
+	char				*p;
+	unsigned char		thing;
+
+	p = ptr;
+	thing = (unsigned char)c;
 	i = 0;
-	while (s[i] != 0)
+	while (i < num)
 	{
-		if (s[i] == c)
-			temp = ((char *)&s[i]);
+		p[i] = thing;
 		i++;
 	}
-	return (temp);
+	return (ptr);
 }
 
-// #include <stdio.h>
-// int main () 
+// int main ()
 // {
-//    const char str[] = "miauuumiau";
-//    const char ch = 'u';
-//    char *ret;
-//    ret = ft_strchr(str, ch);
-//    printf("String after last %c is - %s\n", ch, ret);
-//    return(0);
+//   char str[] = "almost every programmer should know memset!";
+//   ft_memset (str,'-',sizeof(str));
+//   puts (str);
+//   return 0;
 // }
