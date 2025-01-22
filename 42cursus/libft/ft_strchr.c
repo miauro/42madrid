@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (s[i] != 0)
@@ -24,13 +24,13 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-// #include <stdio.h>
-// int main () 
-// {
-//    const char str[] = "miauuumiau";
-//    const char ch = 'a';
-//    char *ret;
-//    ret = ft_strchr(str, ch);
-//    printf("String after %c is - %s\n", ch, ret);
-//    return(0);
-// }
+#include <stdio.h>
+int main()
+{
+	const char str[] = "miauuumiau";
+	const char ch = 'a';
+	char *ret;
+	ret = ft_strchr(str, ch);
+	printf("String after %c is - %s\n", ch, ret);
+	return (0);
+}

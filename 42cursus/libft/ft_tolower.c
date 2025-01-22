@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int ch)
+int ft_tolower(int ch)
 {
 	if (ch > 64 && ch < 91)
 	{
@@ -20,9 +20,10 @@ int	ft_tolower(int ch)
 }
 
 // #include <stdio.h>
-// int main(void){
-//     char ch;
-//     ch = 'g';
-//     printf("%c in lowercase is represented as  %c", ch, ft_tolower(ch));
-//     return 0;
+// int main(void)
+// {
+// 	char ch;
+// 	ch = 'g';
+// 	printf("%c in lowercase is represented as  %c", ch, ft_tolower(ch));
+// 	return 0;
 // }
