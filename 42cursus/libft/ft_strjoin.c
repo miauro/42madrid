@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:50:41 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 14:42:02 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/27 15:28:48 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	s3[i] = 0;
 	return (s3);
 }
 
