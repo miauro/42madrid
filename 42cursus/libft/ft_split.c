@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 15:23:51 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 17:46:08 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/27 17:48:24 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,6 @@ int	ft_wordsize(char const *s, char c)
 	return (i + 1);
 }
 
-char	*ft_cast(char *s, char c, int *j)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**mat;
@@ -78,16 +70,17 @@ char	**ft_split(char const *s, char c)
 			k++;
 			j++;
 		}
+		mat[i][k] = 0;
 		i++;
 	}
+	mat[i] = 0;
 	return (mat);
 }
 
 int	main(void)
 {
-	char const *s = "ey tio que pasa";
+	char const *s = "ey          tio    que    pasa";
 	char **matriz = ft_split(s, ' ');
-	printf("%s\n%s\n%s\n%s\n%s\n", matriz[0], matriz[1], matriz[2], matriz[3],
-		matriz[4]);
+	printf("%s\n%s\n%s\n%s", matriz[0], matriz[1], matriz[2], matriz[3]);
 	return (0);
 }
