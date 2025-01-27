@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 14:43:06 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 15:20:55 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/27 15:22:50 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_size(char const *s1, const char *set)
 	j--;
 	while (ft_isset(set, s1[j]) == 1)
 		j--;
-	return (j - i);
+	return (j - i + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -61,7 +61,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (ft_isset(set, s1[i]) == 1)
 		i++;
-	while (j < (size + 1))
+	while (j < size)
 	{
 		st[j] = s1[i];
 		i++;
