@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:50:41 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 14:04:41 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/27 14:42:02 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ int	ft_size(char const *s1, char const *s2)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *s3;
-	int i;
-	int j;
+	char	*s3;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
-	s3 = (char *)malloc(i * sizeof(char));
+	s3 = (char *)malloc(i * ft_size(s1, s2));
 	if (s3 == NULL)
 		return (NULL);
 	while (s1[i] != 0)
@@ -48,4 +48,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	return (s3);
 }
+
+// int	main(void)
+// {
+// 	printf("%s juntado con %s da %s", "mama", "mia", ft_strjoin("mama", "mia"));
+// 	return (0);
+// }
