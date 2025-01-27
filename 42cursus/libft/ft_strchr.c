@@ -6,13 +6,13 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 11:36:07 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/21 12:34:11 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/27 13:23:55 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != 0)
@@ -24,13 +24,13 @@ char *ft_strchr(const char *s, int c)
 	return (0);
 }
 
-#include <stdio.h>
-int main()
-{
-	const char str[] = "miauuumiau";
-	const char ch = 'a';
-	char *ret;
-	ret = ft_strchr(str, ch);
-	printf("String after %c is - %s\n", ch, ret);
-	return (0);
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	const char str[] = "miauuumiau";
+// 	const char ch = 'a';
+// 	char *ret;
+// 	ret = ft_strchr(str, ch);
+// 	printf("String after %c is - %s\n", ch, ret);
+// 	return (0);
+// }

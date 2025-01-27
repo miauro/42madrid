@@ -6,11 +6,11 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 11:21:27 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/21 11:31:35 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/27 13:38:51 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int ch)
+int	ft_tolower(int ch)
 {
 	if (ch > 64 && ch < 91)
 	{
@@ -25,5 +25,5 @@ int ft_tolower(int ch)
 // 	char ch;
 // 	ch = 'g';
 // 	printf("%c in lowercase is represented as  %c", ch, ft_tolower(ch));
-// 	return 0;
+// 	return (0);
 // }

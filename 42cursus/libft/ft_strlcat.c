@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:20:16 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/22 13:20:16 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/27 13:21:15 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-extern size_t ft_strlcat(char *dest, char *src, size_t size)
+extern size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-    size_t i;
-    size_t j;
-    size_t length;
+	size_t	i;
+	size_t	j;
+	size_t	length;
 
-    j = 0;
-    i = 0;
-    length = 0;
-    while (src[j] != 0)
-        j++;
-    while (dest[i] != 0)
-        i++;
-    if (size <= i)
-        length = j + size;
-    else
-        length = i + j;
-    j = 0;
-    while (src[j] != 0 && (i + 1) < size)
-    {
-        dest[i] = src[j];
-        i++;
-        j++;
-    }
-    dest[i] = 0;
-    return (length);
+	j = 0;
+	i = 0;
+	length = 0;
+	while (src[j] != 0)
+		j++;
+	while (dest[i] != 0)
+		i++;
+	if (size <= i)
+		length = j + size;
+	else
+		length = i + j;
+	j = 0;
+	while (src[j] != 0 && (i + 1) < size)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = 0;
+	return (length);
 }
 
 /*
