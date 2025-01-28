@@ -6,14 +6,14 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:29:10 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:19:06 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/28 14:49:32 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-extern	size_t	ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;

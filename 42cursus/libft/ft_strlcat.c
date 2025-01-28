@@ -6,13 +6,13 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:20:16 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:21:15 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/28 14:48:51 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-extern size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
