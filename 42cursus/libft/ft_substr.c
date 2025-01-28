@@ -6,32 +6,33 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 14:44:01 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:14:24 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/28 16:20:00 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*str1;
-	char			*str2;
-	unsigned int	i;
-	unsigned int	length;
+	char	*sub;
+	size_t	i;
 
-	length = (unsigned int)len;
 	i = 0;
-	str1 = (char *)s;
-	str2 = (char *)malloc(length * sizeof(char));
-	if (str2 == NULL)
+	if (!s)
 		return (NULL);
-	while (i < len && str1[(start - 1) + i] != 0)
+	if ((int)start >= ft_strlen((char *)s))
+		return (ft_strdup(""));
+	sub = (char *)malloc(len + 1);
+	if (!sub)
+		return (NULL);
+	while (i < len && s[len + i] != 0)
 	{
-		str2[i] = str1[(start - 1) + i];
-		i++;
+		sub[i] = s[start + i];
+		i++;	
 	}
-	str2[i] = 0;
-	return (str2);
+	sub[i] = '\0';
+	return (sub);
 }

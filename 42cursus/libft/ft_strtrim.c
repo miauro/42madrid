@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 14:43:06 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 15:28:20 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/28 17:41:53 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	printf("%d\n", size);
 	i = 0;
 	j = 0;
-	st = (char *)malloc(size * sizeof(char));
+	st = (char *)malloc((size + 1) * sizeof(char));
 	if (st == NULL)
 		return (NULL);
 	while (ft_isset(set, s1[i]) == 1)

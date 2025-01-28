@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 22:47:20 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:16:42 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/28 15:44:39 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_compare(const char *big, const char *lit)
 
 char	*ft_strnstr(const char *big, const char *lit, size_t len)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (lit[0] == 0)
