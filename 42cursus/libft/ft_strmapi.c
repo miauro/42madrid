@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 10:57:34 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/29 12:07:42 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:21:50 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int len;
-	char *result;
-	unsigned int i;
+	int				len;
+	char			*result;
+	unsigned int	i;
 
 	i = 0;
 	len = ft_strlen((char *)s);
