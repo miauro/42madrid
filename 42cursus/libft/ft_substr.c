@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 14:44:01 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/28 16:20:00 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/01/29 10:54:23 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (i < len && s[len + i] != 0)
 	{
 		sub[i] = s[start + i];
-		i++;	
+		i++;
 	}
 	sub[i] = '\0';
 	return (sub);
