@@ -6,15 +6,15 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:24:58 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/29 13:51:20 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/07 19:33:34 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c > 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 	{
-		return (c);
+		return (1);
 	}
 	return (0);
 }

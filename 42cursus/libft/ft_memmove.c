@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:40:01 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:25:38 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/07 20:25:38 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 
 	origin = (unsigned char *)src;
 	destination = (unsigned char *)dest;
-	if (destination < origin || destination >= (origin + num))
+	i = 0;
+	if (origin > destination)
 	{
-		i = 0;
 		while (i < num)
 		{
 			destination[i] = origin[i];
@@ -33,14 +33,13 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 	}
 	else
 	{
-		i = num;
-		while (i > 0)
+		while (num > 0)
 		{
-			destination[i] = origin[i];
-			i--;
+			destination[num - 1] = origin[num - 1];
+			num--;
 		}
 	}
-	return ((void *)destination);
+	return (dest);
 }
 
 // int main()
