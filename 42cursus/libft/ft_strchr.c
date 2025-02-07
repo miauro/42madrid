@@ -6,21 +6,25 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 11:36:07 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:23:55 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/07 20:42:26 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	unsigned char	miau;
+	int				i;
 
+	miau = (unsigned char)c;
 	i = 0;
 	while (s[i] != 0)
 	{
-		if (s[i] == c)
+		if (s[i] == miau)
 			return ((char *)&s[i]);
 		i++;
 	}
+	if (miau == '\0')
+		return ((char *)&s[i]);
 	return (0);
 }
 

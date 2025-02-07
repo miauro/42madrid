@@ -6,13 +6,13 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 22:47:20 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/28 15:44:39 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/07 21:27:31 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int	ft_compare(const char *big, const char *lit)
 {
@@ -34,6 +34,8 @@ char	*ft_strnstr(const char *big, const char *lit, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (ft_strlen((char *)lit) > (int)len || len < 0)
+		return (0);
 	if (lit[0] == 0)
 		return ((char *)big);
 	while (i < (len - 1) && big[i] != 0)
