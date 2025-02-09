@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 22:47:20 by mregueir          #+#    #+#             */
-/*   Updated: 2025/02/09 10:43:21 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/09 13:05:02 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,21 @@ int	ft_compare(const char *big, const char *lit)
 char	*ft_strnstr(const char *big, const char *lit, size_t len)
 {
 	size_t	i;
+	size_t	lit_len;
 
-	i = 0;
 	if (lit[0] == 0)
 		return ((char *)big);
-	if (len <= 0)
-		return (0);
-	if (ft_strlen((char *)lit) > (int)len)
-		return (0);
-	while (i < (len - 1) && big[i] != 0)
+	lit_len = ft_strlen((char *)lit);
+	if (lit_len > len)
+		return (NULL);
+	i = 0;
+	while (i <= len - lit_len && big[i] != 0)
 	{
-		if ((int)i + ft_strlen((char *)lit) > (int)len)
-			return (0);
 		if (ft_compare(&big[i], lit) == 1)
 			return ((char *)&big[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // int	main(void)

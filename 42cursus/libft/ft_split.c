@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 15:23:51 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/28 17:41:52 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/09 12:45:28 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,9 @@ int	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	words = 0;
-	if (s[i] == 0)
-		return (0);
-	if (s[i] != c && s[i] != 0)
-		words++;
 	while (s[i] != 0)
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != 0)
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == 0))
 			words++;
 		i++;
 	}
@@ -47,20 +43,18 @@ void	ft_free(char **mat, int words)
 
 char	*ft_nextword(char const *s, int *j, char c)
 {
-	int	k;
-	int	miau;
+	int	start;
+	int	end;
 
-	miau = *j;
-	k = 0;
-	while (s[miau] == c && s[miau] != 0)
-		miau++;
-	while (s[miau] != c && s[miau] != 0)
-	{
-		miau++;
-		k++;
-	}
-	*j = miau;
-	return (ft_substr(s, (miau - k), k));
+	while (s[*j] == c && s[*j] != 0)
+		(*j)++;
+	start = *j;
+	while (s[*j] != c && s[*j] != 0)
+		(*j)++;
+	end = *j;
+	if (end > start)
+		return (ft_substr(s, start, end - start));
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -68,19 +62,22 @@ char	**ft_split(char const *s, char c)
 	char	**mat;
 	int		i;
 	int		j;
-	int		words;
 
-	words = ft_wordcount(s, c);
+	if (!s)
+		return (NULL);
 	i = 0;
 	j = 0;
-	mat = (char **)malloc((words + 1) * sizeof(char *));
-	if (!s || mat == NULL)
+	mat = (char **)malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
+	if (mat == NULL)
 		return (NULL);
 	while (i < ft_wordcount(s, c))
 	{
 		mat[i] = ft_nextword(s, &j, c);
 		if (!mat[i])
-			ft_free(mat, words);
+		{
+			ft_free(mat, i);
+			return (NULL);
+		}
 		i++;
 	}
 	mat[i] = 0;
