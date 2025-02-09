@@ -6,35 +6,26 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:50:41 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 15:28:48 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/09 11:00:13 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-int	ft_size(char const *s1, char const *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] != 0)
-		i++;
-	while (s2[i] != 0)
-		i++;
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;
 	int		i;
 	int		j;
+	int		size;
 
+	size = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	i = 0;
 	j = 0;
-	s3 = (char *)malloc(i * ft_size(s1, s2));
+	s3 = (char *)malloc((size + 1) * sizeof(char));
 	if (s3 == NULL)
 		return (NULL);
 	while (s1[i] != 0)
