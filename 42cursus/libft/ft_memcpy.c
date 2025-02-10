@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:50:12 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:38:34 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/10 19:31:30 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t num)
 	unsigned char	*origin;
 	unsigned char	*destination;
 
+	if (src == 0 && dest == 0)
+		return (0);
 	origin = (unsigned char *)src;
 	destination = (unsigned char *)dest;
 	i = 0;

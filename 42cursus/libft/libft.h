@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 15:22:45 by mregueir          #+#    #+#             */
-/*   Updated: 2025/02/09 13:09:48 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/10 20:10:41 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		ft_isprint(int c);
 int		ft_tolower(int ch);
 int		ft_toupper(int ch);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *lit, size_t len);
 char	*ft_strrchr(const char *s, int c);

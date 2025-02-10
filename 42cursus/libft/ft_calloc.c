@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:47:59 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/27 13:29:20 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/10 20:26:58 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,17 @@
 
 void	*ft_calloc(size_t items, size_t size)
 {
-	void		*ptr;
-	size_t		i;
+	void	*ptr;
+	size_t	i;
 
 	i = 0;
-	if (items == 0 || size == 0 || (items * size) / size != items)
-		return (0);
+	if (size * items == 0)
+	{
+		ptr = malloc(0);
+		if (ptr == 0)
+			return (0);
+		return (ptr);
+	}
 	ptr = malloc(items * size);
 	if (ptr == 0)
 		return (0);

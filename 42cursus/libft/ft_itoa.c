@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:49:00 by mregueir          #+#    #+#             */
-/*   Updated: 2025/02/09 12:51:44 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/10 20:24:02 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ char	*ft_itoa(int n)
 
 	neg = ft_isneg(n);
 	index = ft_getindex(n) + neg;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	result = (char *)malloc((index + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	if (neg > 0)
 	{
 		result[0] = '-';

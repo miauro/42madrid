@@ -6,11 +6,11 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:40:40 by mregueir          #+#    #+#             */
-/*   Updated: 2025/01/21 10:46:30 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/10 20:10:54 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_strlen(char *str)
 
 // int main(void)
 // {
-//     int miau = ft_strlen("        ");     
+//     int miau = ft_strlen("        ");
 //     printf("Longitud de la palabra = %d", miau);
 //     return (0);
 // }

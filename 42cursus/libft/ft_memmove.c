@@ -6,7 +6,7 @@
 /*   By: mregueir <mregueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:40:01 by mregueir          #+#    #+#             */
-/*   Updated: 2025/02/07 20:25:38 by mregueir         ###   ########.fr       */
+/*   Updated: 2025/02/10 19:37:48 by mregueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t num)
+void	*ft_memmove_process(void *dest, const void *src, size_t num)
 {
 	size_t			i;
 	unsigned char	*origin;
@@ -40,6 +40,13 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 		}
 	}
 	return (dest);
+}
+
+void	*ft_memmove(void *dest, const void *src, size_t num)
+{
+	if (src == 0 && dest == 0)
+		return (0);
+	return (ft_memmove_process(dest, src, num));
 }
 
 // int main()
